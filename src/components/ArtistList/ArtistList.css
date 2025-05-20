@@ -1,0 +1,122 @@
+/* Contenedor principal de la lista de artistas: se muestra en forma de fila flexible que envuelve los ítems */
+.artist-view-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los ítems pasen a la línea siguiente si no entran en la misma fila */
+  list-style-type: none; /* Quita los puntos de las listas */
+  padding: 0;
+}
+
+/* Cada artista individual en la lista */
+.artist-item {
+  padding: 10px 20px 20px 0; /* Espaciado alrededor del ítem */
+  list-style-type: none; /* Sin viñetas */
+  line-height: 28px; /* Altura de línea para espaciado vertical */
+  font-size: 14px;
+  white-space: nowrap; /* No permite saltos de línea */
+  overflow: hidden; /* Oculta contenido que se sale del área */
+  -o-text-overflow: ellipsis; /* Soporte antiguo para Opera */
+  text-overflow: ellipsis; /* Muestra "..." si el texto es muy largo */
+  width: 180px;
+  cursor: pointer; /* Cambia el cursor a forma de mano */
+  text-align: center; /* Centra el contenido del texto */
+}
+
+/* Estilo para los enlaces dentro del ítem de artista */
+.artist-item a {
+  text-decoration: none; /* Quita el subrayado */
+  color: #fff; /* Texto blanco */
+}
+
+/* Imagen circular de cada artista */
+.artist-item img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+}
+
+/* Estado normal de la imagen del artista */
+.artist-image img {
+  opacity: 1;
+}
+
+/* Cuando se pasa el mouse por encima, la imagen se vuelve más transparente */
+.artist-image img:hover {
+  opacity: 0.4;
+}
+
+.artist-image {
+  position: relative;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  line-height: 1;
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 0,;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: rgba(160, 160, 160, 0.8);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+
+.heart-icon:hover {
+  color: #ff7373;
+}
+
+.heart-icon.favorito-activo {
+  color: #ff2b2b;
+}
+
+.heart-icon.favorito-activo:hover {
+  color: #b30000;
+}
+
+.artist-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 150%;
+}
+
+.favoritos-panel {
+  width: 80%;
+  padding-left: 20px;
+  border-left: 2px solid #555;
+  color: #fff;
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+
+.favoritos-panel h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  background-color:#1db954;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 50%;
+  text-align: center;
+}
+
+.favoritos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorito-nombre {
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+  font-size: 20px;
+}
+
+.favorito-nombre:hover {
+  color: #1db954; /* Verde Spotify */
+}

@@ -1,0 +1,37 @@
+/* Contenedor principal del campo de búsqueda */
+.track-search-container {
+	position: relative; /* Posición relativa para ubicar elementos hijos si hiciera falta */
+	top: 10px; /* Lo desplaza 10px hacia abajo */
+}
+
+/* Estilos del input (campo de texto) de búsqueda */
+.track-search-container input {
+	background: #fff; 
+	width: 350px; 
+	border-radius: 10px; /* Bordes redondeados */
+	border: none; /* Sin borde */
+	font-family: 'Proxima Nova', Georgia, sans-serif; 
+	padding: 8px 4px 8px 10px; /* Espaciado interno (más a la izquierda para el texto) */
+	outline: none; /* Saca el contorno al hacer foco */
+}
+
+/* Estilo del ícono o texto de búsqueda (lupa) */
+.search {
+	margin-left: 5px; /* Espacio a la izquierda del ícono */
+	cursor: pointer; /* Convierte el mouse en una manito al pasar por encima */
+	color: white; 
+	font-size: 20px; 
+}
+
+.search:hover {
+	color: #1db954; /* Cambia el color al pasar el mouse */
+	transition: color 0.3s ease; /* Transición suave del color */
+}
+
+/* Estilo general para botones (en este caso el de buscar) */
+button {
+	background: none; /* Sin fondo */
+	border: none; /* Sin borde */
+	outline: none; /* Sin contorno al hacer foco */
+}
+

@@ -1,0 +1,16 @@
+/* Contenedor principal del encabezado */
+.header {
+  position: fixed;              /* Se mantiene fijo en la pantalla al hacer scroll */
+  width: 82%;                 
+  z-index: 1000;                /* Prioridad de superposición muy alta */
+  display: flex;                /* Distribuye los elementos horizontalmente */
+  justify-content: space-between; /* Separa los elementos a los extremos (izquierda y derecha) */
+  background: rgb(40, 40, 40);   /* Color de fondo oscuro */
+  padding-bottom: 10px;          /* Espaciado interno (padding) */
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+

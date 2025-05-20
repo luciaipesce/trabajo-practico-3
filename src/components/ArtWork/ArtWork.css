@@ -1,0 +1,13 @@
+/* Contenedor principal de la portada del álbum. 
+   Está fijado en la parte inferior izquierda de la pantalla */
+.album-artwork-container {
+  width: 230px;               /* Ancho fijo de 180 píxeles */
+  position: fixed;            /* Se posiciona de forma fija respecto a la ventana del navegador */
+  bottom: 89px;               /* Se separa 75 píxeles desde la parte inferior */
+}
+
+/* Imagen de la portada del álbum */
+.album-artwork {
+  width: 100%;                /* Ocupa todo el ancho del contenedor */
+}
+

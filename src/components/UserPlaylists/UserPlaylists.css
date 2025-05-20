@@ -1,0 +1,49 @@
+/* Contenedor general de la sección de listas de reproducción del usuario */
+.user-playlist-container {
+  padding: 20px 20px 280px 20px; /* Espaciado interno, especialmente en la parte inferior */
+  color: rgb(179, 179, 179);    
+  margin: 0;                     /* Sin margen exterior */
+}
+
+/* Estilo del encabezado "Tus listas de reproducción" */
+.user-playlist-header {
+  font-weight: 300px;             
+  text-transform: uppercase;     /* Texto en mayúsculas */
+  font-family: 'Proxima Thin', Georgia, sans-serif; /* Fuente personalizada */
+  font-size: 15px;               /* Tamaño pequeño */
+  margin: 0;
+  padding: 0 0 5px 0;            /* Espaciado inferior */
+  letter-spacing: 1px;           /* Espaciado entre letras */
+  color: #1db954;                /* Color verde */
+}
+
+/* Cada ítem de la lista de reproducción del usuario */
+.user-playlist-item {
+  list-style-type: none;         /* Sin viñetas */
+  line-height: 28px;             /* Altura de línea */
+  font-size: 14px;               /* Tamaño de texto */
+  white-space: nowrap;          /* No permite salto de línea */
+  overflow: hidden;             /* Oculta el texto que se desborda */
+  text-overflow: ellipsis;      /* Muestra puntos suspensivos (...) si se corta */
+  width: 100%;               
+  cursor: pointer;              /* Cursor de mano al pasar */
+}
+
+/* Cambio de color al pasar el mouse sobre un ítem */
+.user-playlist-item:hover {
+  color: #fff;                   /* Cambia a blanco al pasar el mouse */
+}
+
+/* Estilo adicional para el ítem activo */
+.user-playlist-container .active {
+  margin-left: -3px;            /* Ajusta visualmente la posición del ítem activo */
+}
+
+
+/* Línea verde a la izquierda del ítem activo */
+.user-playlist-container .active:before {
+  content: "";                  
+  border-left: 3px solid #1db954; 
+  position: relative;
+  left: -10px;
+}

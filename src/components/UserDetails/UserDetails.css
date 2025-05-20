@@ -1,0 +1,24 @@
+/* Contenedor general del usuario en el header (alineado a la derecha) */
+.user-details-container {
+  display: flex; /* Coloca elementos en fila */
+  justify-content: flex-end; /* Alinea los elementos al final (derecha) */
+  padding-right: 0px; /* Espaciado vertical */
+  background: transparent;
+  padding-top: 5px;
+}
+
+/* Imagen de perfil del usuario */
+.user-image {
+  border-radius: 50%; /* Redondea la imagen (círculo) */
+  height: 40px; /* Altura fija */
+}
+
+/* Nombre del usuario al lado de la imagen */
+.user-name {
+  color: #fff; 
+  font-size: 20px; 
+  position: relative;
+  top: 6px; /* Sube un poco el texto para alinearlo con la imagen */
+  margin-left: 10px; /* Separación con respecto a la imagen */
+}
+

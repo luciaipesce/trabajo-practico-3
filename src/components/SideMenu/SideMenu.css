@@ -1,0 +1,53 @@
+/* Contenedor general del menú lateral */
+.side-menu-container {
+  padding: 20px; /* Espaciado interno */
+  color: rgb(179, 179, 179); /* Color de texto gris claro */
+  margin: 0; /* Sin margen externo */
+}
+
+/* Título de la sección 'Tu biblioteca' */
+.user-library-header {
+  font-weight: 500px; /* Fuente más delgada */
+  color: #1db954;
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  font-family: 'Proxima Thin', Georgia, sans-serif; /* Fuente personalizada */
+  font-size: 15px; /* Tamaño de fuente pequeño */
+  margin: 0;
+  padding: 0 0 5px 0; /* Espacio solo abajo */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+/* Estilos para cada ítem del menú */
+.side-menu-item {
+  list-style-type: none; /* Sin viñeta */
+  line-height: 28px; /* Altura de línea */
+  font-size: 16px;
+  width: 100%;
+  padding-right: 10px;
+  cursor: pointer; /* Cursor de mano al pasar */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es largo */
+  white-space: nowrap; /* No permite saltos de línea */
+}
+
+/* Efecto al pasar el mouse sobre los ítems */
+.side-menu-item:hover {
+  color: #fff; /* Cambia el color del texto a blanco */
+}
+
+/* Margen especial para el ítem 'Radio' */
+.radio {
+  margin-bottom: 20px;
+}
+
+/* Estilo especial para el ítem seleccionado */
+.side-menu-container .active {
+  margin-left: -3px;
+}
+
+/* Línea verde a la izquierda para indicar el ítem activo */
+.side-menu-container .active:before {
+  content: ""; /* Elemento visual vacío */
+  border-left: 3px solid #1db954; /* Línea vertical verde */
+  position: relative;
+  left: -10px;
+}

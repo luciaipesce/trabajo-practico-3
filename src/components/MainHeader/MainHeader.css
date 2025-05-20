@@ -1,0 +1,145 @@
+/* Contenedor de los encabezados de navegación (GÉNEROS, NUEVOS LANZAMIENTOS, DESTACADOS) */
+.browse-headers {
+  display: flex;
+}
+
+/* Estilos generales de los textos del header de navegación */
+.browse-headers p {
+  color: rgb(179, 179, 179);         
+  font-size: 14px;
+  text-transform: uppercase;          /* Texto en mayúsculas */
+  font-family: 'Proxima Thin', Georgia, sans-serif;
+  letter-spacing: 1px;
+  margin: 0 20px;
+  cursor: pointer;                    /* Cursor tipo puntero al pasar */
+}
+
+/* Ajuste de margen para el primer texto del header */
+.browse-headers p:first-child {
+  margin: 0 20px 0 0;
+}
+
+/* Efecto hover: cambia el color del texto al pasar el mouse */
+.browse-headers p:hover {
+  color: #fff;
+}
+
+/* Imagen de la playlist destacada */
+.playlist-image {
+  width: 230px;
+}
+
+/* Contenedor que agrupa la imagen y el texto de la playlist */
+.playlist-title-container {
+  display: flex;
+}
+
+/* Contenedor que aloja la información de la playlist, desplazado hacia abajo */
+.playlist-info-container {
+  padding-left: 20px;
+  position: relative;
+  top: 15px;
+}
+
+/* Estilo del texto "Creado por..." debajo del título de la playlist */
+.created-by {
+  font-family: 'Proxima Thin', Georgia, sans-serif;
+  font-size: 13px;
+  color: #aaa;
+  padding: 8px 0;
+}
+
+/* Texto principal más destacado (usualmente el título de la playlist o artista) */
+.lighter-text {
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+  color: #fff;
+}
+
+/* Texto más pequeño con estilo sutil (ej: descripción) */
+.playlist-text {
+  font-family: 'Proxima Thin', Georgia, sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+/* Estilo aplicado al título principal del header */
+.header-title {
+  font-size: 48px;
+  padding: 3px 0 5px 0;
+}
+
+/* Estilo para resaltar la pestaña activa con una línea inferior */
+.browse-headers .active {
+  position: relative;
+}
+
+.browse-headers .active:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  left: 50%;
+  top: 22px;
+  border-bottom: 3px solid #1db954;  
+  transform: translate(-50%, -50%);
+}
+
+
+/* Contenedor del artista cuando se muestra en vista destacada */
+.current-artist-header-container {
+	display: flex;
+}
+
+/* Imagen del artista en vista destacada */
+.current-artist-image {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%; /* Redondea la imagen */
+}
+
+/* Contenedor del texto al lado de la imagen del artista */
+.current-artist-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 20px;
+}
+
+/* Estilo de los textos dentro del contenedor de info del artista */
+.current-artist-info p {
+	text-transform: uppercase;
+	font-family: 'Proxima Thin', Georgia, sans-serif;
+	font-size: 13px;
+}
+
+/* Estilo aplicado a un botón opcional para el artista */
+.artist-button {
+	margin-top: 20px;
+	margin-left: 40px;
+}
+
+/* Estilo del botón de "Volver" en la parte superior izquierda */
+.back-button {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 32px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover para el botón de "Volver" */
+.back-button:hover {
+  color: #1db954;
+}
+
+/* Estilo Importado de Google Icons para el botón de "Volver" */
+.material-symbols-outlined {
+  font-variation-settings: 
+    'FILL' 0, 
+    'wght' 400, 
+    'GRAD' 0, 
+    'opsz' 40;
+    font-size: 40px;
+}
+

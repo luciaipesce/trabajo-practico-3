@@ -1,0 +1,50 @@
+/* Contenedor principal del control de volumen */
+.volume-container {
+  position: absolute;  /* Posiciona el elemento de forma absoluta respecto a su contenedor más cercano con posición relativa */
+  top: 40px;           /* Se separa 48px desde la parte superior del contenedor */
+  right: 20px;         /* Se separa 10px desde la derecha */
+}
+
+/* Estilos para el control deslizante del volumen */
+.volume {
+  width: 120px;        /* Ancho del slider */
+  height: 5px;         /* Altura del slider */
+  background: #4CAF50; /* Color de fondo verde */
+  border-radius: 4px;  /* Bordes redondeados */
+  outline: none;       /* Elimina el borde por defecto al hacer foco */
+  opacity: 1;          /* Opacidad completa */
+}
+
+/* Estilo del track del slider para navegadores Firefox */
+input[type=range]::-moz-range-track {
+  width: 120px;
+  height: 5px;
+  background: #4CAF50;
+  border-radius: 4px;
+  outline: none;
+  opacity: 1;
+}
+
+/* Ícono de volumen */
+.volume-container .fa-volume-up {
+  position: relative;
+  top: 3px;            /* Levanta levemente el ícono */
+  margin-right: 5px;   /* Espacio a la derecha del ícono */
+}
+
+/* Efecto al pasar el mouse sobre el slider */
+.volume:hover {
+  opacity: 0.8;        /* Disminuye un poco la opacidad */
+  background: #4CAF50; /* Mantiene el color verde */
+}
+
+/* Estilo del "thumb" (punto que se arrastra) para navegadores Webkit (Chrome, Safari) */
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Quita el estilo por defecto del navegador */
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #fff;         /* Blanco */
+  cursor: pointer;          /* Cursor de mano al pasar el mouse */
+  border-radius: 50%;       /* Hace el thumb circular */
+}

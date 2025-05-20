@@ -1,0 +1,73 @@
+/* Contenedor principal que organiza los álbumes en forma de grilla */
+.album-view-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en múltiples filas */
+  list-style-type: none; /* Saca los puntos de lista */
+  padding: 0; /* Elimina el espacio interno */
+}
+
+/* Estilo para cada ítem (álbum) de la lista */
+.album-item {
+  padding: 10px;
+  list-style-type: none; /* De nuevo, sin viñetas */
+  line-height: 28px;
+  font-size: 14px;
+  white-space: nowrap; /* Impide saltos de línea en los textos */
+  overflow: hidden; /* Oculta el desborde de contenido */
+  -o-text-overflow: ellipsis; /* Compatibilidad con Opera */
+  text-overflow: ellipsis; /* Agrega "..." si el texto se desborda */
+  width: 205px;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el álbum */
+}
+
+/* Contenedor de la imagen del álbum */
+.album-image {
+  position: relative; /* Necesario para posicionar el ícono de play dentro */
+}
+
+/* Imagen del álbum: ocupa todo el ancho del contenedor */
+.album-image img {
+  width: 100%;
+}
+
+/* Al pasar el mouse por la imagen, se oscurece */
+.album-item img:hover {
+  opacity: 0.3;
+}
+
+/* Contenedor del botón de reproducir */
+.album-image .play-song {
+  width: 40px;
+  opacity: 0; /* Oculto por defecto */
+  text-align: center;
+}
+
+/* Ícono de play dentro de la imagen */
+.album-image .play-song .fa {
+  font-size: 60px;
+  position: absolute; /* Posicionamiento centrado */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ccc;
+  cursor: pointer;
+  -webkit-text-stroke: 6px rgb(24, 24, 24); /* Borde grueso alrededor del ícono */
+  z-index: -1; /* Inicialmente detrás de la imagen */
+}
+
+/* Al pasar el mouse sobre la imagen, se muestra el ícono de play */
+.album-image:hover > .play-song {
+  opacity: 1;
+}
+
+/* Detalles del álbum (nombre y artista) */
+.album-details {
+  line-height: 22px;
+}
+
+/* Estilo para el nombre del artista */
+.album-details .artist-name {
+  color: rgb(179, 179, 179);
+  font-family: 'Proxima Thin', Georgia, sans-serif;
+}
+

@@ -1,0 +1,82 @@
+/* Reseteo de márgenes y paddings en elementos base */
+body,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para Webkit (Chrome, Edge, Opera) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1db954; /* verde Spotify */
+  border-radius: 8px;
+  border: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none; /* quita las flechitas */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1db954 transparent;
+}
+
+/* Estilos globales del body */
+body {
+  font-family: 'Proxima Nova', Georgia, sans-serif; /* Tipografía principal */
+  background: rgb(24, 24, 24); /* Fondo oscuro general */
+  color: #fff; /* Texto blanco */
+  max-width: 1400px; /* Máximo ancho de la app */
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 0;
+  overflow-x: hidden; /* Evita scroll horizontal */
+  font-size: 14px; /* Tamaño de fuente base */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Contenedor principal de la app: incluye barra lateral + contenido principal */
+.app-container {
+  display: flex;
+  position: relative;
+}
+
+/* Sección lateral izquierda (SideMenu + UserPlaylists) */
+.left-side-section {
+  position: fixed; /* Se mantiene fija al hacer scroll */
+  top: 0px;
+  left: 0px;
+  padding-left: 5px;
+  padding-right: 30px;
+  bottom: 50px;
+  width: 210px; /* Ancho del menú lateral */
+  overflow-y: auto; /* Agrega scroll si el contenido excede la altura */
+  background-color: rgb(53, 53, 53);
+}
+
+/* Sección central principal que contiene todo el contenido cambiante */
+.main-section {
+  width: calc(100% - 470px);
+  position: relative;
+  left: 170px; /* Corre el contenido para no superponerse con el menú lateral */
+  padding: 0 10px;
+}
+
+/* Contenedor interno dentro de la sección principal */
+.main-section-container {
+  position: relative;
+  top: 80px; /* Espacio superior, para no solaparse con el header */
+  padding-bottom: 120px; /* Espacio inferior para no tapar con el reproductor */
+  padding-left: 20px; /* Espacio a la izquierda */
+}

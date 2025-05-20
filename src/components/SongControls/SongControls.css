@@ -1,0 +1,122 @@
+/* Contenedor de los detalles de la canción (nombre, artista) */
+.song-details {
+  position: absolute;
+  left: 20px;
+  line-height: 22px;
+}
+
+/* Nombre de la canción (texto más grande y blanco) */
+.song-details .song-name {
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+  color: #fff;
+  font-size: 25px;
+}
+
+/* Nombre del artista (texto más chico y gris) */
+.song-details .artist-name {
+  font-family: 'Proxima Thin', Georgia, sans-serif;
+  color: #aaa;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+/* Contenedor de los botones (reversa, play/pausa, adelante) */
+.song-controls {
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+/* Botones individuales de control */
+.forward,
+.reverse,
+.play-btn,
+.pause-btn {
+  padding: 0 10px;
+  color: rgb(179, 179, 179);
+  cursor: pointer;
+}
+
+/* Tamaño de los íconos de reversa y adelante */
+.reverse,
+.forward {
+  font-size: 25px;
+  position: relative;
+  top: 2px;
+}
+
+/* Efecto hover para los botones de reversa y adelante */
+.reverse:hover,
+.forward:hover {
+  color: #fff;
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+}
+
+/* Botón de play (más grande) */
+.song-player-container .play-btn {
+  position: relative;
+  top: -12px;
+  font-size: 55px;
+}
+
+/* Botón de pausa (similar al de play, con margen adicional) */
+.song-player-container .pause-btn {
+  position: relative;
+  top: -12px;
+  font-size: 55px;
+}
+
+/* Efecto hover para el botón de play y pausa */
+.play-btn:hover,
+.pause-btn:hover {
+  color: #1db954;
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+
+/* Agrega un contorno al ícono de play para que se destaque sobre el fondo */
+.play-btn .fa {
+  -webkit-text-stroke: 4px rgb(40, 40, 40);
+}
+
+/* Contenedor de la barra de progreso */
+.song-progress-container {
+  margin-top: -30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Barra de progreso vacía (gris oscuro) */
+.song-progress {
+  width: 500px;
+  height: 4px;
+  background: rgb(64, 64, 64);
+  border-radius: 4px;
+}
+
+/* Parte de la barra que indica el progreso actual */
+.song-expired {
+  margin: 0;
+  width: 100px; /* Este valor se actualiza dinámicamente */
+  height: 4px;
+  background: #1db954;
+  border-radius: 4px;
+}
+
+/* Timer de inicio (ej: 0:00) alineado a la izquierda */
+.timer-start {
+  font-size: 14px;
+  position: relative;
+  top: -8px;
+  left: -10px;
+}
+
+/* Timer de fin (ej: 3:20) alineado a la derecha */
+.timer-end {
+  font-size: 14px;
+  position: relative;
+  top: -8px;
+  left: 10px;
+}
+

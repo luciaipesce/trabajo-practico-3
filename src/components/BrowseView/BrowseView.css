@@ -1,0 +1,45 @@
+/* Contenedor principal de la vista de categorías */
+.browse-view-container {
+  display: flex;               /* Usa flexbox para organizar elementos */
+  flex-wrap: wrap;             /* Permite que se acomoden en varias filas */
+  list-style-type: none;       /* Saca los puntos de lista */
+  padding: 0;                  /* Elimina el padding por defecto */
+}
+
+/* Estilo de cada categoría individual */
+.category-item {
+  padding: 10px;               /* Espaciado interno */
+  list-style-type: none;       /* Sin puntos de lista */
+  line-height: 28px;           
+  font-size: 14px;            
+  white-space: nowrap;         /* Evita que el texto se divida en varias líneas */
+  overflow: hidden;            /* Oculta el desbordamiento */
+  -o-text-overflow: ellipsis; /* Compatibilidad con navegadores antiguos */
+  text-overflow: ellipsis;     /* Muestra "..." si el texto es muy largo */
+  width: 200px;               
+  cursor: pointer;             /* Cambia el cursor al pasar por encima */
+}
+
+/* Contenedor de la imagen de la categoría */
+.category-image {
+  position: relative;          /* Posición relativa para posicionar elementos hijos */
+}
+
+/* Imagen dentro de la categoría */
+.category-image img {
+  width: 100%;                 /* Ocupa todo el ancho disponible */
+}
+
+/* Efecto hover sobre la imagen */
+.category-item img:hover {
+  opacity: 0.3;                /* Reduce la opacidad al pasar el cursor */
+}
+
+/* Texto con el nombre de la categoría */
+.category-name {
+  position: absolute;          /* Posicionamiento absoluto dentro del contenedor */
+  top: 50%;                    /* Centrado vertical */
+  left: 50%;                   /* Centrado horizontal */
+  transform: translate(-50%, 100%); /* Ajusta para centrar perfectamente */
+  font-size: 18px;             /* Tamaño del texto */
+}

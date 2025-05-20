@@ -1,0 +1,11 @@
+.footer {
+  position: fixed;                 /* Fija el footer en la parte inferior de la ventana */
+  width: 100%;                     /* Ocupa todo el ancho disponible */
+  bottom: 0;                       /* Se posiciona completamente abajo */
+  left: 0;  
+  padding-bottom: 15px;                       /* Alineado al borde izquierdo */
+  background: rgb(40, 40, 40);     /* Color de fondo gris oscuro */
+  height: 80px;                    /* Altura del footer */
+  z-index: 2;                      /* Capa superior para que se muestre por encima de otros elementos */
+}
+

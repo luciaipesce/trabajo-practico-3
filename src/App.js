@@ -43,7 +43,12 @@ class App extends Component {
 
     // Si no hay token, redirige al login de Spotify
     if (!hashParams.access_token) {
-      window.location.href = 'https://accounts.spotify.com/authorize?client_id=230be2f46909426b8b80cac36446b52a&scope=playlist-read-private%20...&response_type=token&redirect_uri=https://api-spotify-tp3.netlify.app/callback';
+      window.location.href =
+      'https://accounts.spotify.com/authorize' +
+      '?client_id=2dd87563976b4562bf6793c96269053c' +
+      '&response_type=token' +
+      '&redirect_uri=https://api-spotify-tp3.netlify.app/callback' +
+      '&scope=user-read-private%20user-read-email%20playlist-read-private%20user-top-read%20user-read-recently-played';
     } else {
       // Si hay token, lo guarda en Redux
       this.props.setToken(hashParams.access_token);
